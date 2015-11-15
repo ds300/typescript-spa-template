@@ -5,11 +5,13 @@ function bundle(inFile, outFile, done) {
     const fs = require('fs');
     const b = browserify();
     b.add(inFile);
-    b.bundle().pipe(fs.createWriteStream(outFile)).on('close', done);
+    b.bundle()
+     .pipe(fs.createWriteStream(outFile))
+     .on('close', done);
 }
 
 function debounce(f, n) {
-  const timeout = null;
+  let timeout = null;
   const doit = (args) => () => {
     timeout = null;
     f.apply(null, args)

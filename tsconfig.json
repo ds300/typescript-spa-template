@@ -22,7 +22,6 @@
         "!node_modules/**"
     ],
     "files": [
-        "src/main.ts",
-        "src/not-main.ts"
+        "src/main.ts"
     ]
 }
